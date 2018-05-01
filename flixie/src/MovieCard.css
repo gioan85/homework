@@ -1,0 +1,31 @@
+.MovieCard-Box{
+    background-color: lightcyan;
+    width:49%; float: left; margin-right: 1%;
+}
+
+.MovieCard-Box.MobileStyle{
+    width:100%; margin-right:0;
+}
+
+.MovieCard-Overview{
+    background-color: white;
+    width:100%; margin:10px 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+}
+
+.MovieCard-Overview.isShow{
+    height: auto;
+}
+.MovieCard-Overview.isHide{
+    height: 0px;
+}
+
+.ShowHideOverview{
+    border:1px solid rgb(172, 172, 172);
+    border-radius: 20px; margin-top:10px;
+    background:-webkit-linear-gradient(bottom, lightcyan, #fff);
+    padding:0 10px;
+}
+
