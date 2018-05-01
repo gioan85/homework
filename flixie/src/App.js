@@ -38,7 +38,7 @@ class App extends Component {
         width : 'isTablet'
       })
     }
-    if(window.innerWidth <= 500)
+    if(window.innerWidth <= 550)
     {
       this.setState({
         width : 'isMobile'

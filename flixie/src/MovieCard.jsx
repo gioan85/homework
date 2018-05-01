@@ -50,11 +50,11 @@ export default class MovieCard extends Component {
   }
 
   componentWillMount() {
-    window.addEventListener('resize reload', this.path_2);
+    window.addEventListener('resize', this.path_2);
   }          
 
   componentWillUnmount() {
-    window.removeEventListener('resize reload', this.path_2);
+    window.removeEventListener('resize', this.path_2);
   }
 
   ShowHide_Overview(){
