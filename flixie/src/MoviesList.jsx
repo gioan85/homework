@@ -1,27 +1,20 @@
 import React, { Component } from 'react';
-import MoiveCard from './MovieCard';
+import PropTypes from 'prop-types';
 import MovieCard from './MovieCard';
 
-export default class MoviesList extends Component {
-    
-    
-    sort_film (){
-        console.log(this.props.movies);
-        const sort_film = [].concat(this.props.movies)
-        .sort((a, b) => a.vote_cound > b.vote_cound);
-        console.log(sort_film);
-        //return sort_film;
-    }
-    
-    
+export default class MoviesList extends Component {    
     render() {
         return (
             <div>
                 {
-                    this.props.movies.map (m => <MovieCard movies={m} width={this.props.width}/>)
-                    //this.sort_film()
+                    this.props.movies.map(m => <MovieCard key={m.id} movies={m} width={this.props.width}/>)
                 }
             </div>
         )
     }
+}
+
+MoviesList.propTypes = {
+    movies: PropTypes.array,
+    width: PropTypes.number,
 }

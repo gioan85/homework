@@ -4,7 +4,6 @@ import './App.css';
 import {Container} from 'bloomer';
 import "bulma/css/bulma.css";
 import MoviesList from './MoviesList';
-//import TEST_DATA from './test_json';
 
 class App extends Component {
   constructor(props){
@@ -74,8 +73,8 @@ class App extends Component {
   render() {
     let content;
     
-    if(this.state.loading)
-      content = <h1> I'm loading @ </h1>
+    const isLoading = this.state.loading ? <h1> I'm loading... </h1> : null;
+    
     if(this.state.moviesSearch)
       content = <MoviesList movies={this.state.moviesSearch} width={this.state.width}/>
     else
@@ -91,6 +90,7 @@ class App extends Component {
           </header>
           <Container>
             <input type="text" className="App-search-bar" value={this.state.search} onChange={this.updateSearch.bind(this) }/>
+            {isLoading}
             {content}
           </Container>
         </div>
